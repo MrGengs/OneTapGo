@@ -80,9 +80,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.profile:
-                // Menangani klik pada ikon Profile
                 Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
-                // Anda bisa membuka activity Profile atau melakukan aksi lainnya di sini
                 Intent intent = new Intent(this, ProfileActivity.class);
                 startActivity(intent);
                 return true;
