@@ -15,8 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private MaterialToolbar topAppBar;
     private EditText searchEditText;
     private MaterialCardView mapsCard, contactsCard, calculatorCard;
     private BottomNavigationView bottomNavigation;
@@ -27,22 +25,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Inisialisasi View
-        topAppBar = findViewById(R.id.topAppBar);
         mapsCard = findViewById(R.id.mapsCard);
         contactsCard = findViewById(R.id.contactsCard);
         calculatorCard = findViewById(R.id.calculatorCard);
         bottomNavigation = findViewById(R.id.bottomNavigation);
 
-        // Pengaturan Toolbar
-        setSupportActionBar(topAppBar);
-
         // Event Listener untuk Kartu
         mapsCard.setOnClickListener(v -> {
-            Toast.makeText(this, "Maps clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivity(intent);
         });
 
         contactsCard.setOnClickListener(v -> {
-            Toast.makeText(this, "Contacts clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ContactsActivity.class);
+            startActivity(intent);
         });
 
         calculatorCard.setOnClickListener(v -> {
@@ -56,9 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
             if (itemId == R.id.home) {
                 Toast.makeText(MainActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
-                return true;
-            } else if (itemId == R.id.favorites) {
-                Toast.makeText(MainActivity.this, "Favorites selected", Toast.LENGTH_SHORT).show();
                 return true;
             } else if (itemId == R.id.settings) {
                 Toast.makeText(MainActivity.this, "Settings selected", Toast.LENGTH_SHORT).show();
