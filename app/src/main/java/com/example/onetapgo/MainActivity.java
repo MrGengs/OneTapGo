@@ -52,17 +52,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Pengaturan Bottom Navigation
-        bottomNavigation.setOnNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.home:
-                    Toast.makeText(MainActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.favorites:
-                    Toast.makeText(MainActivity.this, "Favorites selected", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.profile:
-                    Toast.makeText(MainActivity.this, "Profile selected", Toast.LENGTH_SHORT).show();
-                    return true;
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+
+            if (itemId == R.id.home) {
+                Toast.makeText(MainActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
+                return true;
+            } else if (itemId == R.id.favorites) {
+                Toast.makeText(MainActivity.this, "Favorites selected", Toast.LENGTH_SHORT).show();
+                return true;
+            } else if (itemId == R.id.profile) {
+                Toast.makeText(MainActivity.this, "Profile selected", Toast.LENGTH_SHORT).show();
+                return true;
             }
             return false;
         });
@@ -78,14 +79,14 @@ public class MainActivity extends AppCompatActivity {
     // Menangani klik item menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.profile:
-                Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, ProfileActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.profile) {
+            Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ProfileActivity.class);
+            startActivity(intent);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 }
