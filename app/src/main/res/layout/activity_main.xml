@@ -17,8 +17,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
             app:title="One Touch"
-            app:titleTextColor="@color/black"
-            app:menu="@menu/top_app_bar"/>
+            app:titleTextColor="@color/black" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Main Content -->

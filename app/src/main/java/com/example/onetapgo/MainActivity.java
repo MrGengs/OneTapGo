@@ -60,32 +60,11 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.favorites) {
                 Toast.makeText(MainActivity.this, "Favorites selected", Toast.LENGTH_SHORT).show();
                 return true;
-            } else if (itemId == R.id.profile) {
-                Toast.makeText(MainActivity.this, "Profile selected", Toast.LENGTH_SHORT).show();
+            } else if (itemId == R.id.settings) {
+                Toast.makeText(MainActivity.this, "Settings selected", Toast.LENGTH_SHORT).show();
                 return true;
             }
             return false;
         });
-    }
-
-    // Menampilkan menu di toolbar
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.top_app_bar, menu);  // Menambahkan menu dari XML
-        return true;
-    }
-
-    // Menangani klik item menu
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-
-        if (itemId == R.id.profile) {
-            Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, ProfileActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
