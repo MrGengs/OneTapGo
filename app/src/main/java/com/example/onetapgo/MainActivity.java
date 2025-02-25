@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Inisialisasi View
         topAppBar = findViewById(R.id.topAppBar);
-        searchEditText = findViewById(R.id.searchEditText);
         mapsCard = findViewById(R.id.mapsCard);
         contactsCard = findViewById(R.id.contactsCard);
         calculatorCard = findViewById(R.id.calculatorCard);
