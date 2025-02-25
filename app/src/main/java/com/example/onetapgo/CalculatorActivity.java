@@ -59,7 +59,7 @@ public class CalculatorActivity extends AppCompatActivity {
         String num2Str = input2.getText().toString();
 
         if (num1Str.isEmpty() || num2Str.isEmpty()) {
-            resultText.setText("Please enter numbers");
+            resultText.setText("Isikan Angka");
             return;
         }
 

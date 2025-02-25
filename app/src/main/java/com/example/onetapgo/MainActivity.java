@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
                 return true;
             } else if (itemId == R.id.settings) {
-                Toast.makeText(MainActivity.this, "Settings selected", Toast.LENGTH_SHORT).show();
+                // Buka SettingsActivity
+                Intent intent = new Intent(MainActivity.this, Settings.class);
+                startActivity(intent);
                 return true;
             }
             return false;

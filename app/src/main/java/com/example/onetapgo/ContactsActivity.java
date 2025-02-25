@@ -45,6 +45,13 @@ public class ContactsActivity extends AppCompatActivity {
 
         // Tombol Kirim SMS
         btnSms.setOnClickListener(v -> sendSmsMessage());
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(ContactsActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void makePhoneCall() {
