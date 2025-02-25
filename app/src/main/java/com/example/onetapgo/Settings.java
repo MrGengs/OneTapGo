@@ -1,8 +1,10 @@
 package com.example.onetapgo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.content.SharedPreferences;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
@@ -13,10 +15,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Settings extends AppCompatActivity {
-
     private Switch darkModeSwitch;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+    private ImageView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +26,14 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         // Inisialisasi Toolbar
-        Toolbar toolbar = findViewById(R.id.topAppBar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(v -> finish()); // Tombol kembali
+        btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(Settings.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            finish();
+        });
 
         // Inisialisasi View
         darkModeSwitch = findViewById(R.id.darkModeSwitch);

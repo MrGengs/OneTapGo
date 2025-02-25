@@ -1,18 +1,20 @@
 package com.example.onetapgo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CalculatorActivity extends AppCompatActivity {
-
     private EditText input1, input2;
     private Button addButton, subtractButton, multiplyButton, divideButton;
     private TextView resultText;
+    private ImageView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,14 @@ public class CalculatorActivity extends AppCompatActivity {
         Button buttonMultiply = findViewById(R.id.buttonMultiply);
         Button buttonDivide = findViewById(R.id.buttonDivide);
         Button buttonEquals = findViewById(R.id.buttonEquals);
+        btnBack = findViewById(R.id.btnBack);
 
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(CalculatorActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            finish();
+        });
 
         // Tombol Operasi
         addButton.setOnClickListener(v -> performOperation("+"));
@@ -72,7 +81,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 if (num2 != 0) {
                     result = num1 / num2;
                 } else {
-                    resultText.setText("Cannot divide by zero");
+                    resultText.setText("Tidak dapat dibagi dengan nol");
                     return;
                 }
                 break;

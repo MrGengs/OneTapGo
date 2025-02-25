@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/gradient_blue"
         android:padding="12dp"
         android:elevation="4dp">
 
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Google Maps"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/q1"
             android:textSize="20sp"
             android:textStyle="bold"
             android:paddingBottom="16dp" />
@@ -83,7 +83,7 @@
             android:text="Cari di Google Maps"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:backgroundTint="@color/colorPrimary"
+            app:backgroundTint="@color/q1"
             app:cornerRadius="16dp"
             app:icon="@drawable/ic_map"
             app:iconGravity="textStart"
