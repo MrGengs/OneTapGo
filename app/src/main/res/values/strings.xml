@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OneTapGo</string>
+    <string name="syarat_ketentuan"><![CDATA[Syarat & Ketentuan]]></string>
 </resources>

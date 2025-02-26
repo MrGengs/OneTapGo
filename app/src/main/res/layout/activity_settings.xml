@@ -38,27 +38,77 @@
             android:layout_marginStart="16dp"/>
     </LinearLayout>
 
-    <!-- Switch for Dark Mode -->
+    <!-- Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingVertical="12dp"
+        android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/darkModeText"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Dark Mode"
-            android:textSize="16sp"
-            android:textColor="@android:color/black" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
 
-        <Switch
-            android:id="@+id/darkModeSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_privacy"/>
+
+            <TextView
+                android:id="@+id/btnPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kebijakan Privasi"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_terms"/>
+
+            <TextView
+                android:id="@+id/btnTermsConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/syarat_ketentuan"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_info"/>
+
+            <TextView
+                android:id="@+id/btnAppInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info Aplikasi"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>
