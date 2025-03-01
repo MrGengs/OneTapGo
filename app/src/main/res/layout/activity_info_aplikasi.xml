@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="25dp"
     android:background="@color/white">
 
     <!-- Header -->
@@ -25,7 +25,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/Logo"/>
+        android:src="@drawable/logo_app"/>
 
     <!-- Nama Aplikasi -->
     <TextView
@@ -62,9 +62,11 @@
         android:id="@+id/app_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Website: www.myapp.com"
+        android:text="Website: MrGengs.com"
         android:textSize="18sp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:textColor="@color/black"
         android:layout_marginTop="8dp"/>
 
 </LinearLayout>
